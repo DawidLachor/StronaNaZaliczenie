@@ -25,10 +25,24 @@ figure>img{
     ),url("../image/uczen.jpg") center center;
 
 }
+.uczen:hover{
+    background: linear-gradient(
+            rgba(0,0,0,0.2),
+            rgba(0,0,0,0.2)
+    ),url("../image/uczen.jpg") center center;
+
+}
 .student {
     background: linear-gradient(
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
+    ), url("../image/student.jpg") center center;
+
+}
+.student:hover {
+    background: linear-gradient(
+            rgba(0,0,0,0.2),
+            rgba(0,0,0,0.2)
     ), url("../image/student.jpg") center center;
 
 }
@@ -38,10 +52,22 @@ figure>img{
             rgba(0,0,0,0.5)
     ), url("../image/senior.jpg") center center;
 }
+.senior:hover{
+    background: linear-gradient(
+            rgba(0,0,0,0.2),
+            rgba(0,0,0,0.2)
+    ), url("../image/senior.jpg") center center;
+}
 .bilet{
     background: linear-gradient(
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
+    ), url("../image/calendar.jpg") center center;
+}
+.bilet:hover{
+    background: linear-gradient(
+            rgba(0,0,0,0.2),
+            rgba(0,0,0,0.2)
     ), url("../image/calendar.jpg") center center;
 }
 .promocja{
