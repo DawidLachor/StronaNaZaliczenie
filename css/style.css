@@ -1,0 +1,55 @@
+nav>a>img {
+    width: 30px;
+    height: 30px;
+}
+
+.menu{
+    font-size: 20px;
+}
+.logowanie{
+    font-weight: bold;
+}
+.container-fluid{
+    padding-top: 20px;
+}
+article>h2{
+    margin-bottom: 20px;
+}
+figure>img{
+    width: 100%;
+}
+.uczen{
+    background: linear-gradient(
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+    ),url("../image/uczen.jpg") center center;
+
+}
+.student {
+    background: linear-gradient(
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+    ), url("../image/student.jpg") center center;
+
+}
+.senior{
+    background: linear-gradient(
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+    ), url("../image/senior.jpg") center center;
+}
+.bilet{
+    background: linear-gradient(
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+    ), url("../image/calendar.jpg") center center;
+}
+.promocja{
+    height: 400px;
+    color: #ffffff;
+    background-size: cover;
+}
+
+footer{
+   text-align: center;
+}
