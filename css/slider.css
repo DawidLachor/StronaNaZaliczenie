@@ -208,9 +208,3 @@
 .slider-dots-button:focus {
     outline: none;
 }
-
-@media screen and (max-width: 650px) {
-    article>h2{
-        font-size: 29px!important;
-    }
-}

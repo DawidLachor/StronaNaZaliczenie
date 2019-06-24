@@ -1,0 +1,17 @@
+.zdjecie{
+    clear: both;
+    background: url("../image/airport-2373727_1920.jpg") top center;
+    background-size: cover;
+    height: 400px;
+}
+article>h2 {
+    margin-top: 20px;
+}
+
+.img-fluid {
+    margin-top: 20px;
+}
+
+figure{
+    padding-bottom: 20px;
+}

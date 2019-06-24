@@ -1,0 +1,18 @@
+.zdjecie{
+    background: url("../image/letters.jpg") center center;
+    background-size: cover;
+    height: 350px;
+}
+p {
+    margin: 1px;
+}
+p:last-child{
+    margin-bottom: 20px;
+}
+
+h4{
+    margin: 20px 0;
+}
+.map-container {
+    height: 400px;
+}
