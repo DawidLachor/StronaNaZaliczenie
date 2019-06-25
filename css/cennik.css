@@ -1,0 +1,5 @@
+.zdjecie{
+    height: 400px;
+    background: url("../image/bills.jpg") center center;
+    background-size: cover;
+}
