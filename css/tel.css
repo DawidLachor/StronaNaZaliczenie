@@ -1,9 +1,9 @@
 @media screen and (max-width: 650px) {
     .element-title{
-        font-size: 25px!important;
+        font-size: 29px!important;
     }
 
     nav>a.navbar-brand {
-        font-size: 18px!important;
+        font-size: 15px!important;
     }
 }
