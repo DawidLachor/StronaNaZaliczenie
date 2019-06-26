@@ -29,7 +29,7 @@
                 <li class="nav-item"><a href="index.html" class="nav-link menu">Start</a></li>
                 <li class="nav-item"><a href="rozklad.html" class="nav-link menu">Rozkład jazdy</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link menu">O nas</a></li>
-                <li class="nav-item"><a href="cennik.html" class="nav-link menu">Cennik</a></li>
+                <li class="nav-item"><a href="cennik.php" class="nav-link menu">Cennik</a></li>
                 <li class="nav-item"><a href="kontakt.php" class="nav-link menu">Kontakt</a></li>
                 <li class="nav-item "><a href="#" class="nav-link menu logowanie">Zaloguj się</a></li>
             </ul>
@@ -40,6 +40,7 @@
     <div class="zdjecie"></div>
 
     <h3>Cenniki</h3>
+    <?php include 'php/cennik.php' ?>
 
     <h4>Męcina-Nowy Sącz</h4>
     <div class="tab-content table-responsive">
@@ -58,57 +59,27 @@
             <tbody>
             <tr>
                 <th scope="row">Męcina</th>
-                <td>2,00</td>
-                <td>2,50</td>
-                <td>3,00</td>
-                <td>3,50</td>
-                <td>4,00</td>
-                <td>4,50</td>
+                <?php wyswietlns(1); ?>
             </tr>
             <tr>
                 <th scope="row">Chomranice</th>
-                <td>2,50</td>
-                <td>2,00</td>
-                <td>2,50</td>
-                <td>3,00</td>
-                <td>3,50</td>
-                <td>4,00</td>
+                <?php wyswietlns(2); ?>
             </tr>
             <tr>
                 <th scope="row">Klęczany</th>
-                <td>3,00</td>
-                <td>2,50</td>
-                <td>2,00</td>
-                <td>2,50</td>
-                <td>3,00</td>
-                <td>3,50</td>
+                <?php wyswietlns(3); ?>
             </tr>
             <tr>
                 <th scope="row">Marcinkowice</th>
-                <td>3,50</td>
-                <td>3,00</td>
-                <td>2,50</td>
-                <td>2,00</td>
-                <td>2,50</td>
-                <td>3,00</td>
+                <?php wyswietlns(4); ?>
             </tr>
             <tr>
                 <th scope="row">Chełmiec</th>
-                <td>4,00</td>
-                <td>3,50</td>
-                <td>3,00</td>
-                <td>2,50</td>
-                <td>2,00</td>
-                <td>2,50</td>
+                <?php wyswietlns(5); ?>
             </tr>
             <tr>
-                <th scope="row">Chełmiec</th>
-                <td>4,50</td>
-                <td>4,00</td>
-                <td>3,50</td>
-                <td>3,00</td>
-                <td>2,50</td>
-                <td>2,00</td>
+                <th scope="row">Nowy Sącz</th>
+                <?php wyswietlns(6); ?>
             </tr>
             </tbody>
         </table>
@@ -130,43 +101,24 @@
             <tbody>
             <tr>
                 <th scope="row">Kłodne</th>
-                <td>2,00</td>
-                <td>2,50</td>
-                <td>3,00</td>
-                <td>3,50</td>
-                <td>4,00</td>
+                <?php wyswietllim(1); ?>
+
             </tr>
             <tr>
                 <th scope="row">Męcina</th>
-                <td>2,50</td>
-                <td>2,00</td>
-                <td>2,50</td>
-                <td>3,00</td>
-                <td>3,50</td>
+                <?php wyswietllim(2); ?>
             </tr>
             <tr>
                 <th scope="row">Pisarzowa</th>
-                <td>3,00</td>
-                <td>2,50</td>
-                <td>2,00</td>
-                <td>2,50</td>
-                <td>3,00</td>
+                <?php wyswietllim(3); ?>
             </tr>
             <tr>
                 <th scope="row">Mordarka</th>
-                <td>3,50</td>
-                <td>3,00</td>
-                <td>2,50</td>
-                <td>2,00</td>
-                <td>2,50</td>
+                <?php wyswietllim(4); ?>
             </tr>
             <tr>
                 <th scope="row">Limanowa</th>
-                <td>4,00</td>
-                <td>3,50</td>
-                <td>3,00</td>
-                <td>2,50</td>
-                <td>2,00</td>
+                <?php wyswietllim(5); ?>
             </tr>
             </tbody>
         </table>

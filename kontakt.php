@@ -29,8 +29,8 @@
                 <li class="nav-item"><a href="index.html" class="nav-link menu">Start</a></li>
                 <li class="nav-item"><a href="rozklad.html" class="nav-link menu">Rozkład jazdy</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link menu">O nas</a></li>
-                <li class="nav-item"><a href="cennik.html" class="nav-link menu">Cennik</a></li>
-                <li class="nav-item"><a href="kontakt.html" class="nav-link menu">Kontakt</a></li>
+                <li class="nav-item"><a href="cennik.php" class="nav-link menu">Cennik</a></li>
+                <li class="nav-item"><a href="kontakt.php" class="nav-link menu">Kontakt</a></li>
                 <li class="nav-item "><a href="#" class="nav-link menu logowanie">Zaloguj się</a></li>
             </ul>
         </div>
@@ -53,27 +53,28 @@
         </article>
 
         <div class="col-lg-5">
-            <form action="kontakt.html" method="post">
+            <form action="kontakt.php" method="post">
                 <div class="form-group">
                     <label for="name">Imie i nazwisko:</label>
-                    <input type="text" id="name" class="form-control" placeholder="Jan Nowak">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Jan Nowak">
                 </div>
                 <div class="form-group">
                     <label for="email">Adres email:</label>
-                    <input type="text" id="email" class="form-control" placeholder="Adres email">
+                    <input type="text" id="email" name="email" class="form-control" placeholder="Adres email">
                 </div>
                 <div class="form-group">
                     <label for="temat">Temat:</label>
-                    <input type="text" id="temat" class="form-control" placeholder="Temat wiadomości">
+                    <input type="text" id="temat" name="temat" class="form-control" placeholder="Temat wiadomości">
                 </div>
                 <div class="form-group">
                     <label for="text">Treść:</label>
-                    <textarea id="text" class="form-control" rows="4" placeholder="Wpisz treść"></textarea>
+                    <textarea id="text" class="form-control" name="text" rows="4" placeholder="Wpisz treść"></textarea>
                 </div>
-                <button type="submit" class="btn btn-dark">Wyślij</button>
+                <button type="submit" name="wyslij" class="btn btn-dark">Wyślij</button>
             </form>
-            <?php include "php/folmularz.php" ?>
+
         </div>
+        <?php include "php/folmularz.php" ?>
 
     </div>
 </div>

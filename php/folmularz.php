@@ -2,15 +2,32 @@
 $username="lacdaw";
 $password="myaI3taUPsql";
 $host="localhost";
-$dbName="gazdom";
+$dbName="lacdaw";
 
-$polaczenie=mysqli_connect($host,$username,$password,$dbName);
+$polaczenie=@new mysqli($host,$username,$password,$dbName);
 
-if(!$polaczenie){
-    echo "Brak polaczenia z baza <br>";
+if($polaczenie->connect_errno){
+    echo "<script>console.log('Brak polaczenia z baza');</script>";
     exit;
 }
 else{
-    echo "Polaczyles sie z baza danych";
+    echo "<script>console.log('Polaczyles sie z baza danych');</script>";
+    if (isset($_POST['wyslij'])) {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $thema = $_POST['temat'];
+        $text = $_POST['text'];
+        $wstawienie = $polaczenie->query("INSERT INTO lacdaw.wiadomosci(id, name, email, thema, message) VALUES ('', '$name', '$email', '$thema', '$text');");
+
+        if ($wstawienie === false) {
+            echo '<script>console.log("Zapytanie nie zostało wykonane poprawnie!");</script>';
+            $polaczenie->close();
+        } else {
+            echo '<script>console.log("Zapytanie zostało wykonane poprawnie!");</script>';
+            $polaczenie->close();
+        }
+    }
 }
+
+
 ?>
