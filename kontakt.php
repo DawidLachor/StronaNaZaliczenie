@@ -53,7 +53,7 @@
         </article>
 
         <div class="col-lg-5">
-            <form action="#" method="post">
+            <form action="kontakt.html" method="post">
                 <div class="form-group">
                     <label for="name">Imie i nazwisko:</label>
                     <input type="text" id="name" class="form-control" placeholder="Jan Nowak">
@@ -72,6 +72,7 @@
                 </div>
                 <button type="submit" class="btn btn-dark">Wyślij</button>
             </form>
+            <?php include "php/folmularz.php" ?>
         </div>
 
     </div>
