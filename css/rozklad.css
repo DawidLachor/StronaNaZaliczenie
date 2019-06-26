@@ -1,0 +1,5 @@
+.zdjecie{
+    height: 400px;
+
+    background: url("../image/bus-stop.jpg") center center no-repeat;
+}
