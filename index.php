@@ -10,15 +10,17 @@ if (!isset($_SESSION)) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/tel.css">
-    <link rel="stylesheet" href="css/kontakt.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <link rel="shortcut icon" href="image/logo.png">
 
     <title>Transport-Busem Wójcik Tadeusz</title>
 </head>
+
 <body>
+
 <header>
     <nav class="navbar navbar-dark fixed-top navbar-expand-lg bg-dark">
 
@@ -142,52 +144,89 @@ if (!isset($_SESSION)) {
     </div>
 </div>
 
-<div class="zdjecie"></div>
+<!--Slider-->
+<div class="elements-list slider1" id="slider1">
+    <article class="element zdjecie1">
+        <h2 class="element-title">
+            Najszybszy transport do miasta!
+        </h2>
+        <div class="element-text">
+            Nie marnuj czasu na dojazdy
+        </div>
+    </article>
+    <article class="element zdjecie2">
+        <h2 class="element-title">
+            Wygodne busy
+        </h2>
+        <div class="element-text">
+            Usiądź i zrelaksuj się podróżą
+        </div>
+    </article>
+    <article class="element zdjecie3">
+        <h2 class="element-title">
+            Omiń korki
+        </h2>
+        <div class="element-text">
+            Nie martw się korkami
+        </div>
+    </article>
+</div>
+
+
 <div class="container-fluid bg-light">
     <div class="row">
-        <article class="col-lg-4 offset-1">
-            <h2>Kontakt z nami</h2>
-            <h4>Transport-Busem</h4>
-            <p>Wójcik Tadeusz</p>
-            <p>Męcina 586</p>
-            <p>34-654 Męcina</p>
-            <p>tel. kom: 509 515 799</p>
-            <p>tel: 18 332 70 70</p>
-            <p>email: <a href="mailto:TransportBusowWojcik@gmail.com">TransportBusowWojcik@gmail.com</a></p>
+
+        <!--        Opis-->
+        <article class="col-md-12 col-lg-5 offset-1">
+            <h2 class="thema">Miej mobilność i bądź punktualny</h2>
+            <p class="tekst">
+                Firma "Transport-Busem Wójcik Tadeusz" to przede wszystkim doświadczenie i profesjonalizm. Nasza
+                firma działa na rynku transportowym już od wielu lat.
+            </p>
+            <p class="tekst">
+                Specjalizujemy się w transporcie osobowym. Dysponujemy Autokarami i busami firm: MERCEDES, MAN.
+                Nasze zawsze zadbane i sprawne pojazdy. Nasi klienci podróżują zawsze w komfortowych warunkach.
+            </p>
+            <p class="tekst">Zaufaj sprawdzonemu i punktualnemu przewoźnikowi! Oferujemy liczne promocje, zniżki i
+                bilety
+                miesięczne. Na naszych liniach codziennie przewozimy setki osób do pracy, do szkół czy na zakupy
+            </p>
         </article>
 
-        <div class="col-lg-5">
-            <form action="kontakt.php" method="post">
-                <div class="form-group">
-                    <label for="name">Imie i nazwisko:</label>
-                    <input type="text" id="imie" name="imie" class="form-control" placeholder="Jan Nowak">
-                </div>
-                <div class="form-group">
-                    <label for="email">Adres email:</label>
-                    <input type="text" id="Email" name="Email" class="form-control" placeholder="Adres email">
-                </div>
-                <div class="form-group">
-                    <label for="temat">Temat:</label>
-                    <input type="text" id="temat" name="temat" class="form-control" placeholder="Temat wiadomości">
-                </div>
-                <div class="form-group">
-                    <label for="text">Treść:</label>
-                    <textarea id="text" class="form-control" name="text" rows="4" placeholder="Wpisz treść"></textarea>
-                </div>
-                <button type="submit" name="wyslij" class="btn btn-dark">Wyślij</button>
-            </form>
+        <figure class="col-md-12 col-lg-5">
+            <img src="image/coach.png" alt="autokar">
+        </figure>
 
+
+        <h2 class="col-12 ">Nasze promocje</h2>
+        <div class="col-md-3 uczen promocja d-flex justify-content-center align-content-center flex-wrap">
+            <div class="d-flex flex-column">
+                <h3 class="p-0">Zniżka dla</h3>
+                <p class="p-0">Uczniów</p>
+            </div>
         </div>
-        <?php include "php/folmularz.php" ?>
+        <div class="col-md-3 student promocja d-flex justify-content-center align-content-center flex-wrap">
+            <div class="d-flex flex-column">
+                <h3 class="p-0">Zniżka dla</h3>
+                <p class="p-0">Studentów</p>
+            </div>
+        </div>
+        <div class="col-md-3 senior promocja d-flex justify-content-center align-content-center flex-wrap">
+            <div class="d-flex flex-column">
+                <h3 class="p-0">Zniżka dla</h3>
+                <p class="p-0">Seniorów</p>
+            </div>
+        </div>
+        <div class="col-md-3 bilet promocja d-flex d-flex justify-content-center align-content-center flex-wrap">
+            <div class="d-flex flex-column">
+                <h3 class="p-0">Bilety</h3>
+                <p class="p-0">Miesięczne</p>
+            </div>
+        </div>
+
 
     </div>
 </div>
-
-<div id="map-container" class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2581.201784699269!2d20.5496818!3d49.6881728!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473df774d77c152b%3A0x84f39ad4888964cd!2sTransport-Busem+W%C3%B3jcik+Tadeusz!5e0!3m2!1spl!2spl!4v1561403528702!5m2!1spl!2spl"
-            allowfullscreen></iframe>
-</div>
-
 
 <footer class="bg-dark">
     <span class="text-light d-inline">&copy; Wszystkie prawa zastrzezone</span>
@@ -200,5 +239,6 @@ if (!isset($_SESSION)) {
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/slider.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@ if (!isset($_SESSION)) {
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/tel.css">
-    <link rel="stylesheet" href="css/kontakt.css">
+    <link rel="stylesheet" href="css/about.css">
 
     <link rel="shortcut icon" href="image/logo.png">
 
@@ -142,56 +142,32 @@ if (!isset($_SESSION)) {
     </div>
 </div>
 
+<!--Zdjecie-->
 <div class="zdjecie"></div>
+
+<!--Opis-->
 <div class="container-fluid bg-light">
     <div class="row">
-        <article class="col-lg-4 offset-1">
-            <h2>Kontakt z nami</h2>
-            <h4>Transport-Busem</h4>
-            <p>Wójcik Tadeusz</p>
-            <p>Męcina 586</p>
-            <p>34-654 Męcina</p>
-            <p>tel. kom: 509 515 799</p>
-            <p>tel: 18 332 70 70</p>
-            <p>email: <a href="mailto:TransportBusowWojcik@gmail.com">TransportBusowWojcik@gmail.com</a></p>
+        <article class="col-lg-5 offset-lg-1">
+            <h2 class="thema">Kilka słów o nas</h2>
+            <p class="tekst">Firma "Transport-Busem Wójcik Tadeusz" to przede wszystkim doświadczenie i profesjonalizm. Nasza firma
+                działa na rynku transportowym już od wielu lat.</p>
+            <p class="tekst">Specjalizujemy się w transporcie osobowym. Dysponujemy Autokarami i busami firm: MERCEDES, MAN. Nasze
+                zawsze zadbane i sprawne pojazdy. Nasi klienci podróżują zawsze w komfortowych warunkach.</p>
+            <p class="tekst">Zaufaj sprawdzonemu i punktualnemu przewoźnikowi! Oferujemy liczne promocje, zniżki i bilety miesięczne.
+                Na naszych liniach codziennie przewozimy setki osób do pracy, do szkół czy na zakupy</p>
+            <p class="tekst">Wynajmujemy busy na różne rodzaje impres mn. wesele, komunie...</p>
         </article>
-
-        <div class="col-lg-5">
-            <form action="kontakt.php" method="post">
-                <div class="form-group">
-                    <label for="name">Imie i nazwisko:</label>
-                    <input type="text" id="imie" name="imie" class="form-control" placeholder="Jan Nowak">
-                </div>
-                <div class="form-group">
-                    <label for="email">Adres email:</label>
-                    <input type="text" id="Email" name="Email" class="form-control" placeholder="Adres email">
-                </div>
-                <div class="form-group">
-                    <label for="temat">Temat:</label>
-                    <input type="text" id="temat" name="temat" class="form-control" placeholder="Temat wiadomości">
-                </div>
-                <div class="form-group">
-                    <label for="text">Treść:</label>
-                    <textarea id="text" class="form-control" name="text" rows="4" placeholder="Wpisz treść"></textarea>
-                </div>
-                <button type="submit" name="wyslij" class="btn btn-dark">Wyślij</button>
-            </form>
-
-        </div>
-        <?php include "php/folmularz.php" ?>
-
+        <figure class="col-lg-5">
+            <img src="image/autobus.jpg" class="img-fluid" alt="Busy">
+        </figure>
     </div>
 </div>
-
-<div id="map-container" class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2581.201784699269!2d20.5496818!3d49.6881728!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473df774d77c152b%3A0x84f39ad4888964cd!2sTransport-Busem+W%C3%B3jcik+Tadeusz!5e0!3m2!1spl!2spl!4v1561403528702!5m2!1spl!2spl"
-            allowfullscreen></iframe>
-</div>
-
 
 <footer class="bg-dark">
     <span class="text-light d-inline">&copy; Wszystkie prawa zastrzezone</span>
 </footer>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

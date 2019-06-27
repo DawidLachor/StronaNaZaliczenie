@@ -13,8 +13,8 @@ if($polaczenie->connect_errno){
 else{
     echo "<script>console.log('Polaczyles sie z baza danych');</script>";
     if (isset($_POST['wyslij'])) {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
+        $name = $_POST['imie'];
+        $email = $_POST['Email'];
         $thema = $_POST['temat'];
         $text = $_POST['text'];
         $wstawienie = $polaczenie->query("INSERT INTO lacdaw.wiadomosci(id, name, email, thema, message) VALUES ('', '$name', '$email', '$thema', '$text');");
@@ -24,6 +24,7 @@ else{
             $polaczenie->close();
         } else {
             echo '<script>console.log("Zapytanie zostało wykonane poprawnie!");</script>';
+            $wstawienie->close();
             $polaczenie->close();
         }
     }

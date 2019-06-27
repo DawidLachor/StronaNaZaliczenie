@@ -1,0 +1,5 @@
+.zdjecie{
+    background: url("../image/hand.jpg") center center;
+    background-size: cover;
+    height: 400px;
+}

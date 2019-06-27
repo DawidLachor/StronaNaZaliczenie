@@ -1,6 +1,7 @@
 <?php
 if (!isset($_SESSION)) {
     session_start();
+
 }
 ?>
 <!DOCTYPE html>
@@ -12,7 +13,7 @@ if (!isset($_SESSION)) {
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/tel.css">
-    <link rel="stylesheet" href="css/kontakt.css">
+    <link rel="stylesheet" href="css/rozklad.css">
 
     <link rel="shortcut icon" href="image/logo.png">
 
@@ -142,50 +143,102 @@ if (!isset($_SESSION)) {
     </div>
 </div>
 
+<!--Zdjecie-->
 <div class="zdjecie"></div>
-<div class="container-fluid bg-light">
-    <div class="row">
-        <article class="col-lg-4 offset-1">
-            <h2>Kontakt z nami</h2>
-            <h4>Transport-Busem</h4>
-            <p>Wójcik Tadeusz</p>
-            <p>Męcina 586</p>
-            <p>34-654 Męcina</p>
-            <p>tel. kom: 509 515 799</p>
-            <p>tel: 18 332 70 70</p>
-            <p>email: <a href="mailto:TransportBusowWojcik@gmail.com">TransportBusowWojcik@gmail.com</a></p>
-        </article>
 
-        <div class="col-lg-5">
-            <form action="kontakt.php" method="post">
-                <div class="form-group">
-                    <label for="name">Imie i nazwisko:</label>
-                    <input type="text" id="imie" name="imie" class="form-control" placeholder="Jan Nowak">
-                </div>
-                <div class="form-group">
-                    <label for="email">Adres email:</label>
-                    <input type="text" id="Email" name="Email" class="form-control" placeholder="Adres email">
-                </div>
-                <div class="form-group">
-                    <label for="temat">Temat:</label>
-                    <input type="text" id="temat" name="temat" class="form-control" placeholder="Temat wiadomości">
-                </div>
-                <div class="form-group">
-                    <label for="text">Treść:</label>
-                    <textarea id="text" class="form-control" name="text" rows="4" placeholder="Wpisz treść"></textarea>
-                </div>
-                <button type="submit" name="wyslij" class="btn btn-dark">Wyślij</button>
-            </form>
+<!--Rozkład jazdy-->
+<h2 class="jazda">Rozkład jazdy</h2>
+<?php include "php/rozklad.php" ?>
+<h4 class="bus">Męcina-Nowy Sącz</h4>
+<div class="tablica tab-content table-responsive bg-light">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Męcina</th>
+            <th scope="col">Chomranice</th>
+            <th scope="col">Klęczany</th>
+            <th scope="col">Marcinkowice</th>
+            <th scope="col">Chełmiec</th>
+            <th scope="col">Nowy Sącz</th>
+        </tr>
+        </thead>
+        <tbody>
 
-        </div>
-        <?php include "php/folmularz.php" ?>
+        <?php wyswietlMecNS() ?>
 
-    </div>
+        </tbody>
+    </table>
 </div>
 
-<div id="map-container" class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2581.201784699269!2d20.5496818!3d49.6881728!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473df774d77c152b%3A0x84f39ad4888964cd!2sTransport-Busem+W%C3%B3jcik+Tadeusz!5e0!3m2!1spl!2spl!4v1561403528702!5m2!1spl!2spl"
-            allowfullscreen></iframe>
+<h4 class="bus">Nowy Sącz-Męcina</h4>
+<div class="tablica tab-content table-responsive bg-light">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Nowy Sącz</th>
+            <th scope="col">Chełmiec</th>
+            <th scope="col">Marcinkowice</th>
+            <th scope="col">Klęczany</th>
+            <th scope="col">Chomranice</th>
+            <th scope="col">Męcina</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <?php wyswietlNSMec() ?>
+
+        </tbody>
+    </table>
+</div>
+
+<h4 class="bus">Kłodne-Limanowa</h4>
+<div class="tablica tab-content table-responsive bg-light">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Kłodne</th>
+            <th scope="col">Męcina</th>
+            <th scope="col">Pisarzowa</th>
+            <th scope="col">Mordarka</th>
+            <th scope="col">Limanowa</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php wyswietlKloLim() ?>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="bus">Limanowa-Kłodne</h4>
+<div class="tablica tab-content table-responsive bg-light">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Limanowa</th>
+            <th scope="col">Mordarka</th>
+            <th scope="col">Pisarzowa</th>
+            <th scope="col">Męcina</th>
+            <th scope="col">Kłodne</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php wyswietlLimKlo() ?>
+        </tbody>
+    </table>
+</div>
+
+<div class="bg-light historia d-flex justify-content-center">
+    <div class="d-flex flex-column">
+        <h5 class="p-0">Legenda:</h5>
+        <p class="p-0">D - Kursuje w dni powszechne</p>
+        <p class="p-0">S - Kursuje w nauki szkolnej</p>
+        <p class="p-0">6 - Kursuje w Soboty</p>
+        <p class="p-0">7 - Kursuje w Niedziele</p>
+    </div>
 </div>
 
 

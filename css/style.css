@@ -27,8 +27,8 @@ figure>img{
 }
 .uczen:hover{
     background: linear-gradient(
-            rgba(0,0,0,0.2),
-            rgba(0,0,0,0.2)
+            rgba(0,0,0,0.3),
+            rgba(0,0,0,0.3)
     ),url("../image/uczen.jpg") center center;
 
 }
@@ -41,8 +41,8 @@ figure>img{
 }
 .student:hover {
     background: linear-gradient(
-            rgba(0,0,0,0.2),
-            rgba(0,0,0,0.2)
+            rgba(0,0,0,0.3),
+            rgba(0,0,0,0.3)
     ), url("../image/student.jpg") center center;
 
 }
@@ -54,8 +54,8 @@ figure>img{
 }
 .senior:hover{
     background: linear-gradient(
-            rgba(0,0,0,0.2),
-            rgba(0,0,0,0.2)
+            rgba(0,0,0,0.3),
+            rgba(0,0,0,0.3)
     ), url("../image/senior.jpg") center center;
 }
 .bilet{
@@ -66,8 +66,8 @@ figure>img{
 }
 .bilet:hover{
     background: linear-gradient(
-            rgba(0,0,0,0.2),
-            rgba(0,0,0,0.2)
+            rgba(0,0,0,0.3),
+            rgba(0,0,0,0.3)
     ), url("../image/calendar.jpg") center center;
 }
 .promocja{
@@ -79,4 +79,11 @@ figure>img{
 footer{
    text-align: center;
     padding: 20px;
+}
+.tekst {
+    font-size: 1.2rem;
+}
+.thema {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
 }

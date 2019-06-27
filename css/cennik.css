@@ -3,3 +3,16 @@
     background: url("../image/bills.jpg") center center;
     background-size: cover;
 }
+
+.bus{
+    text-align: center;
+    margin: 10px;
+}
+.tablica{
+    padding-bottom: 50px;
+}
+
+.cennik{
+    margin: 20px 0 50px;
+    text-align: center;
+}

@@ -33,6 +33,7 @@ function wyswietllim($id){
             echo $row['Limanowa'];
             echo "</td>";
         }
+        $zapytanie->close();
     }
 }
 
@@ -72,6 +73,7 @@ function wyswietlns($id){
             echo $row['NowySacz'];
             echo "</td>";
         }
+        $zapytanie->close();
     }
 }
 ?>

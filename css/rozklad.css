@@ -1,4 +1,26 @@
-body{
-    background: url("../image/bus-stop.jpg") center center no-repeat;
-    height: 100vh;
+.zdjecie{
+    background: url("../image/bus-stop.jpg") top center;
+    background-size: cover;
+    height: 400px;
+}
+
+.jazda{
+    margin: 20px 0 50px;
+    text-align: center;
+}
+
+.bus{
+    text-align: center;
+    margin: 10px;
+}
+.tablica{
+    padding-bottom: 50px;
+}
+
+.historia p {
+    margin: 0;
+    padding: 0;
+}
+.historia{
+    margin-bottom: 20px;
 }
