@@ -3,3 +3,16 @@
     background-size: cover;
     height: 400px;
 }
+.wraper{
+    height: 500px;
+}
+ul{
+    list-style: none;
+}
+.przycisk {
+    margin: 10px;
+}
+
+h3 {
+    font-size: 2.2rem;
+}

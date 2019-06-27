@@ -35,7 +35,7 @@ if (!isset($_SESSION)) {
                 <li class="nav-item"><a href="index.php" class="nav-link menu">Start</a></li>
                 <li class="nav-item"><a href="rozklad.php" class="nav-link menu">Rozkład jazdy</a></li>
                 <li class="nav-item"><a href="about.php" class="nav-link menu">O nas</a></li>
-                <li class="nav-item"><a href="cennik.php" class="nav-link menu">Cennik</a></li>
+                <li class="nav-item"><a href="php/cennik.php" class="nav-link menu">Cennik</a></li>
                 <li class="nav-item"><a href="kontakt.php" class="nav-link menu">Kontakt</a></li>
                 <?php if (isset($_SESSION['zalogowany']) && $_SESSION['zalogowany'] == true) {
                     echo '<li class="nav-item dropdown"><a href="#" class="nav-link menu dropdown-toggle" id="konto" data-toggle="dropdown">Konto</a>
@@ -85,8 +85,8 @@ if (!isset($_SESSION)) {
                     <button type="submit" name="zaloguj" class="btn btn-dark">Zaloguj</button>
                 </form>
             </div>
-            <div class="modal-footer">
-                <h5>Nie masz konta, utwórz konto za darmo</h5>
+            <div class="modal-footer d-flex justify-content-between">
+                <p class="message">Nie masz konta, utwórz konto za darmo</p>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rejestracja">
                     Rejestracja
                 </button>
@@ -95,7 +95,7 @@ if (!isset($_SESSION)) {
         </div>
     </div>
 </div>
-
+<?php include "php/rejestracja.php" ?>
 <!-- Modal Rejestracja -->
 <div class="modal fade" id="rejestracja" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -109,7 +109,7 @@ if (!isset($_SESSION)) {
             <div class="modal-body">
                 <form action="index.php" method="post">
                     <div class="form-group">
-                        <label for="login">Login:</label>
+                        <label for="log">Login:</label>
                         <input type="text" class="form-control" id="log" name="log" placeholder="Login">
                     </div>
                     <div class="form-group">
@@ -118,7 +118,7 @@ if (!isset($_SESSION)) {
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="tel" placeholder="Email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                     </div>
                     <div class="form-group">
                         <label for="name">Imie:</label>
@@ -134,9 +134,9 @@ if (!isset($_SESSION)) {
                     </div>
                     <div class="form-group">
                         <label for="tel">Telefon:</label>
-                        <input type="tel" class="form-control" id="tel" name="tel" placeholder="XXX-XXX-XXX">
+                        <input type="number" class="form-control" id="tel" name="tel" placeholder="XXXXXXXXX">
                     </div>
-                    <button type="submit" class="btn btn-dark">Zarejestruj</button>
+                    <button type="submit" name="zarejestruj" class="btn btn-dark">Zarejestruj</button>
                 </form>
             </div>
         </div>
@@ -145,6 +145,9 @@ if (!isset($_SESSION)) {
 
 <!--Zdjecie-->
 <div class="zdjecie"></div>
+
+<!--Zegar-->
+<canvas id="zegar"></canvas>
 
 <!--Rozkład jazdy-->
 <h2 class="jazda">Rozkład jazdy</h2>
@@ -253,5 +256,7 @@ if (!isset($_SESSION)) {
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/zegar.js"></script>
+<script src="js/Vector.js"></script>
 </body>
 </html>

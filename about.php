@@ -53,95 +53,128 @@ if (!isset($_SESSION)) {
         </div>
 
     </nav>
-</header>
-<?php include "php/logowanie.php" ?>
-<!-- Modal Logowanie -->
-<div class="modal fade" id="logowanie" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="logine">Logowanie</h5>
-                <button type="button" class="close" data-dismiss="modal">
-                    <span>&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="index.php" method="post">
-                    <div class="form-group">
-                        <label for="login">Login:</label>
-                        <input type="text" class="form-control" id="login" name="login" placeholder="Login">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Hasło:</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Hasło">
-                        <?php
-                        if (isset($_SESSION['blad'])) {
-                            echo $_SESSION['blad'];
-                        }
-                        ?>
-                    </div>
+    <header>
+        <nav class="navbar navbar-dark fixed-top navbar-expand-lg bg-dark">
 
-                    <button type="submit" name="zaloguj" class="btn btn-dark">Zaloguj</button>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <h5>Nie masz konta, utwórz konto za darmo</h5>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rejestracja">
-                    Rejestracja
-                </button>
+            <a href="index.php" class="navbar-brand "><img src="image/logo.png" class="mr-1" alt=""> Transport-Busem Wójcik
+                Tadeusz</a>
 
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#mainMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="mainMenu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.php" class="nav-link menu">Start</a></li>
+                    <li class="nav-item"><a href="rozklad.php" class="nav-link menu">Rozkład jazdy</a></li>
+                    <li class="nav-item"><a href="about.php" class="nav-link menu">O nas</a></li>
+                    <li class="nav-item"><a href="cennik.php" class="nav-link menu">Cennik</a></li>
+                    <li class="nav-item"><a href="kontakt.php" class="nav-link menu">Kontakt</a></li>
+                    <?php if (isset($_SESSION['zalogowany']) && $_SESSION['zalogowany'] == true) {
+                        echo '<li class="nav-item dropdown"><a href="#" class="nav-link menu dropdown-toggle" id="konto" data-toggle="dropdown">Konto</a>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="konto.php">Konto</a>
+                              <a class="dropdown-item" href="php/logout.php">Wyloguj</a>
+                            </div>
+                        </li>';
+                    } else {
+                        echo '<li class="nav-item "><button type="button" class="btn btn-danger av-link menu logowanie" data-toggle="modal" data-target="#logowanie">
+                    Zaloguj się
+                </button></li>';
+                    }
+                    ?>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <?php include "php/logowanie.php" ?>
+    <!-- Modal Logowanie -->
+    <div class="modal fade" id="logowanie" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logine">Logowanie</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="index.php" method="post">
+                        <div class="form-group">
+                            <label for="login">Login:</label>
+                            <input type="text" class="form-control" id="login" name="login" placeholder="Login">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Hasło:</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Hasło">
+                            <?php
+                            if (isset($_SESSION['blad'])) {
+                                echo $_SESSION['blad'];
+                            }
+                            ?>
+                        </div>
+
+                        <button type="submit" name="zaloguj" class="btn btn-dark">Zaloguj</button>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <p class="message">Nie masz konta, utwórz konto za darmo</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rejestracja">
+                        Rejestracja
+                    </button>
+
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<!-- Modal Rejestracja -->
-<div class="modal fade" id="rejestracja" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="rej">Rejestracja</h5>
-                <button type="button" class="close" data-dismiss="modal">
-                    <span>&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="index.php" method="post">
-                    <div class="form-group">
-                        <label for="login">Login:</label>
-                        <input type="text" class="form-control" id="log" name="log" placeholder="Login">
-                    </div>
-                    <div class="form-group">
-                        <label for="pass">Hasło:</label>
-                        <input type="password" class="form-control" id="pass" name="pass" placeholder="Hasło">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="tel" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Imie:</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Imie">
-                    </div>
-                    <div class="form-group">
-                        <label for="subname">Nazwisko:</label>
-                        <input type="text" class="form-control" id="subname" name="subname" placeholder="Nazwisko">
-                    </div>
-                    <div class="form-group">
-                        <label for="land">Miejscowosc:</label>
-                        <input type="text" class="form-control" id="land" name="land" placeholder="Miejscowosc">
-                    </div>
-                    <div class="form-group">
-                        <label for="tel">Telefon:</label>
-                        <input type="tel" class="form-control" id="tel" name="tel" placeholder="XXX-XXX-XXX">
-                    </div>
-                    <button type="submit" class="btn btn-dark">Zarejestruj</button>
-                </form>
+    <?php include "php/rejestracja.php"?>
+    <!-- Modal Rejestracja -->
+    <div class="modal fade" id="rejestracja" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rej">Rejestracja</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="index.php" method="post">
+                        <div class="form-group">
+                            <label for="log">Login:</label>
+                            <input type="text" class="form-control" id="log" name="log" placeholder="Login">
+                        </div>
+                        <div class="form-group">
+                            <label for="pass">Hasło:</label>
+                            <input type="password" class="form-control" id="pass" name="pass" placeholder="Hasło">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Imie:</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Imie">
+                        </div>
+                        <div class="form-group">
+                            <label for="subname">Nazwisko:</label>
+                            <input type="text" class="form-control" id="subname" name="subname" placeholder="Nazwisko">
+                        </div>
+                        <div class="form-group">
+                            <label for="land">Miejscowosc:</label>
+                            <input type="text" class="form-control" id="land" name="land" placeholder="Miejscowosc">
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">Telefon:</label>
+                            <input type="number" class="form-control" id="tel" name="tel" placeholder="XXXXXXXXX">
+                        </div>
+                        <button type="submit" name="zarejestruj" class="btn btn-dark">Zarejestruj</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
 <!--Zdjecie-->
 <div class="zdjecie"></div>
 

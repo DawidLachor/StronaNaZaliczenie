@@ -25,6 +25,7 @@ else {
             if ($log->num_rows > 0) {
                 $_SESSION['zalogowany']=true;
                 $wynik = $log->fetch_assoc();
+                $_SESSION['id'] = $wynik['id'];
                 $_SESSION['Imie'] = $wynik['Imie'];
                 $_SESSION['Nazwisko'] = $wynik['Nazwisko'];
                 $_SESSION['Bilet'] = $wynik['Bilet'];
@@ -36,8 +37,10 @@ else {
                 $log->close();
             } else {
                 $_SESSION['blad'] = "<span>Nieprawidłowy login lub hasło</span>";
-                header("Location:index.php");
-                $log->close();
+                echo '<div class="alert fixed-bottom alert-danger alert-dismissible">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Oszczezenie!</strong> Podany login lub hasło jest błedne
+                </div>';
             }
         }
         $polaczenie->close();

@@ -1,5 +1,4 @@
 .zdjecie{
-    clear: both;
     background: url("../image/imprint.jpg") center left;
     background-size: cover;
     height: 400px;
@@ -14,4 +13,12 @@ article>h2 {
 
 figure{
     padding-bottom: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    .zdjecie{
+        background: url("../image/imprint.jpg") right center;
+        background-size: cover;
+        height: 400px;
+    }
 }

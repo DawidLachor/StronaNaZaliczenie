@@ -24,7 +24,6 @@ else{
             $polaczenie->close();
         } else {
             echo '<script>console.log("Zapytanie zostało wykonane poprawnie!");</script>';
-            $wstawienie->close();
             $polaczenie->close();
         }
     }
