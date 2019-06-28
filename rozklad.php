@@ -143,14 +143,19 @@ if (!isset($_SESSION)) {
     </div>
 </div>
 
+
 <!--Zdjecie-->
 <div class="zdjecie"></div>
 
-<!--Zegar-->
-<canvas id="zegar"></canvas>
-
-<!--Rozkład jazdy-->
-<h2 class="jazda">Rozkład jazdy</h2>
+<div class="container-fluid">
+    <div class="row clock">
+        <div class="col-lg-3 offset-lg-1">
+        <canvas id="zegar" ></canvas>
+        </div>
+        <!--Rozkład jazdy-->
+        <h2 class="jazda col-lg-7" >Rozkład jazdy</h2>
+    </div>
+</div>
 <?php include "php/rozklad.php" ?>
 <h4 class="bus">Męcina-Nowy Sącz</h4>
 <div class="tablica tab-content table-responsive bg-light">
@@ -256,7 +261,7 @@ if (!isset($_SESSION)) {
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/zegar.js"></script>
 <script src="js/Vector.js"></script>
+<script src="js/zegar.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 .zdjecie{
     background: url("../image/bus-stop.jpg") top center;
     background-size: cover;
@@ -6,7 +7,7 @@
 
 .jazda{
     margin: 20px 0 50px;
-    text-align: center;
+
 }
 
 .bus{
@@ -23,4 +24,11 @@
 }
 .historia{
     padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1260px){
+    .jazda{
+        margin: 20px 0 50px;
+        text-align: center;
+    }
 }

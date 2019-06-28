@@ -76,7 +76,7 @@ if (!isset($_SESSION['zalogowany'])) {
                 <form action="konto.php" method="post">
                     <div class="form-group">
                         <label for="lastpass">Stare hasło:</label>
-                        <input type="text" class="form-control" id="lastpass" name="lastpass" placeholder="Stare hasło" required>
+                        <input type="password" class="form-control" id="lastpass" name="lastpass" placeholder="Stare hasło" required>
                     </div>
                     <div class="form-group">
                         <label for="newpass">Nowe Hasło:</label>
