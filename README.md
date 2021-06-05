@@ -24,5 +24,5 @@ This page was made for a final project in "Hypertext Languages and Web Developme
 
 ## Contact
 * Email - dawidlachor@gmail.com
-* Linkedin - linkedin.com/in/dawid-lachor/
+* Linkedin - www.linkedin.com/in/dawid-lachor
 * Page - www.skorpjdk.pl
